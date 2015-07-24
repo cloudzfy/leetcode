@@ -11,7 +11,7 @@ Copyright (C) 2015 Cloudzfy. All Rights Reserved.
 5. [Longest Palindromic Substring](https://github.com/cloudzfy/leetcode/tree/master/005%20Longest%20Palindromic%20Substring)
 6. [ZigZag Conversion](https://github.com/cloudzfy/leetcode/tree/master/006%20ZigZag%20Conversion)
 7. [Reverse Integer](https://github.com/cloudzfy/leetcode/tree/master/007%20Reverse%20Integer%20)
-8. [String to Integer (atoi)]()
+8. [String to Integer (atoi)](https://github.com/cloudzfy/leetcode/tree/master/008%20String%20to%20Integer%20(atoi))
 9. [Palindrome Number]()
 10. [Regular Expression Matching]()
 11. [Container With Most Water]()
