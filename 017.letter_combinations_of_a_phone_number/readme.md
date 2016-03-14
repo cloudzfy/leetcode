@@ -4,7 +4,7 @@ Given a digit string, return all possible letter combinations that the number co
 
 A mapping of digit to letters (just like on the telephone buttons) is given below.
 
-![Telephone Keypad](https://github.com/cloudzfy/leetcode/tree/master/017.letter_combinations_of_a_phone_number/telephone_keypad.png)
+![Telephone Keypad](https://raw.githubusercontent.com/cloudzfy/leetcode/master/017.letter_combinations_of_a_phone_number/telephone_keypad.png)
 
 * **Input:** &nbsp;&nbsp;&nbsp;`Digit string "23"`
 * **Output:** `["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]`
