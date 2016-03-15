@@ -24,7 +24,7 @@ Copyright (C) 2015 Cloudzfy. All Rights Reserved.
 18. [4Sum](https://github.com/cloudzfy/leetcode/tree/master/018.4sum)
 19. [Remove Nth Node From End of List](https://github.com/cloudzfy/leetcode/tree/master/019.remove_nth_node_from_end_of_list)
 20. [Valid Parentheses](https://github.com/cloudzfy/leetcode/tree/master/020.valid_parentheses)
-21. [Merge Two Sorted Lists]()
+21. [Merge Two Sorted Lists](https://github.com/cloudzfy/leetcode/tree/master/)
 22. [Generate Parentheses]()
 23. [Merge k Sorted Lists]()
 24. [Swap Nodes in Pairs]()
