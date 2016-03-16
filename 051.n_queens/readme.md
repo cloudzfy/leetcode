@@ -2,7 +2,7 @@
 
 The *n*-queens puzzle is the problem of placing *n* queens on an *n*×*n* chessboard such that no two queens attack each other.
 
-![Eight Queen Puzzle](https://raw.githubusercontent.com/cloudzfy/leetcode/master/images/eight_queens.png)
+![Eight Queens Puzzle](https://raw.githubusercontent.com/cloudzfy/leetcode/master/images/eight_queens.png)
 
 Given an integer *n*, return all distinct solutions to the *n*-queens puzzle.
 
