@@ -2,7 +2,7 @@
 
 Follow up for "Search in Rotated Sorted Array":
 
-What if *duplicates are allowed*?
+What if *duplicates* are allowed?
 
 Would this affect the run-time complexity? How and why?
 
