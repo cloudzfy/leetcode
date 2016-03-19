@@ -13,6 +13,8 @@ In order to reach the princess as quickly as possible, the knight decides to mov
 
 For example, given the dungeon below, the initial health of the knight must be at least **7** if he follows the optimal path `RIGHT-> RIGHT -> DOWN -> DOWN`.
 
+![Dungeon](https://raw.githubusercontent.com/cloudzfy/leetcode/master/images/dungeon.png)
+
 **Notes:**
 
 * The knight's health has no upper bound.
