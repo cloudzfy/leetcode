@@ -10,40 +10,42 @@ Count the number of prime numbers less than a non-negative number, *n*.
 
 3. Let's write down all of 12's factors:
 
-```
-2 × 6 = 12
-3 × 4 = 12
-4 × 3 = 12
-6 × 2 = 12
-```
+  ```
+  2 × 6 = 12
+  3 × 4 = 12
+  4 × 3 = 12
+  6 × 2 = 12
+  ```
 
-As you can see, calculations of 4 × 3 and 6 × 2 are not necessary. Therefore, we only need to consider factors up to √*n* because, if *n* is divisible by some number *p*, then *n* = *p* × *q* and since *p* ≤ *q*, we could derive that *p* ≤ √*n*.
+  As you can see, calculations of 4 × 3 and 6 × 2 are not necessary. Therefore, we only need to consider factors up to √*n* because, if *n* is divisible by some number *p*, then *n* = *p* × *q* and since *p* ≤ *q*, we could derive that *p* ≤ √*n*.
 
-Our total runtime has now improved to O(*n*<sup>1.5</sup>), which is slightly better. Is there a faster approach?
+  Our total runtime has now improved to O(*n*<sup>1.5</sup>), which is slightly better. Is there a faster approach?
 
-```
-public int countPrimes(int n) {
-   int count = 0;
-   for (int i = 1; i < n; i++) {
-      if (isPrime(i)) count++;
-   }
-   return count;
-}
+  ```
+  public int countPrimes(int n) {
+     int count = 0;
+     for (int i = 1; i < n; i++) {
+        if (isPrime(i)) count++;
+     }
+     return count;
+  }
 
-private boolean isPrime(int num) {
-   if (num <= 1) return false;
-   // Loop's ending condition is i * i <= num instead of i <= sqrt(num)
-   // to avoid repeatedly calling an expensive function sqrt().
-   for (int i = 2; i * i <= num; i++) {
-      if (num % i == 0) return false;
-   }
-   return true;
-}
-```
+  private boolean isPrime(int num) {
+     if (num <= 1) return false;
+     // Loop's ending condition is i * i <= num instead of i <= sqrt(num)
+     // to avoid repeatedly calling an expensive function sqrt().
+     for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) return false;
+     }
+     return true;
+  }
+  ```
 
 4. The [Sieve of Eratosthenes](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) is one of the most efficient ways to find all prime numbers up to *n*. But don't let that name scare you, I promise that the concept is surprisingly simple.
 
-We start off with a table of *n* numbers. Let's look at the first number, 2. We know all multiples of 2 must not be primes, so we mark them off as non-primes. Then we look at the next number, 3. Similarly, all multiples of 3 such as 3 × 2 = 6, 3 × 3 = 9, ... must not be primes, so we mark them off as well. Now we look at the next number, 4, which was already marked off. What does this tell you? Should you mark off all multiples of 4 as well?
+  ![Sieve of Eratosthenes](https://raw.githubusercontent.com/cloudzfy/leetcode/master/images/sieve_of_eratosthenes.gif)
+
+  We start off with a table of *n* numbers. Let's look at the first number, 2. We know all multiples of 2 must not be primes, so we mark them off as non-primes. Then we look at the next number, 3. Similarly, all multiples of 3 such as 3 × 2 = 6, 3 × 3 = 9, ... must not be primes, so we mark them off as well. Now we look at the next number, 4, which was already marked off. What does this tell you? Should you mark off all multiples of 4 as well?
 
 5. 4 is not a prime because it is divisible by 2, which means all multiples of 4 must also be divisible by 2 and were already marked off. So we can skip 4 immediately and go to the next number, 5. Now, all multiples of 5 such as 5 × 2 = 10, 5 × 3 = 15, 5 × 4 = 20, 5 × 5 = 25, ... can be marked off. There is a slight optimization here, we do not need to start from 5 × 2 = 10. Where should we start marking off?
 
@@ -53,26 +55,26 @@ We start off with a table of *n* numbers. Let's look at the first number, 2. We 
 
 8. Yes, the terminating loop condition can be *p* < √*n*, as all non-primes ≥ √*n* must have already been marked off. When the loop terminates, all the numbers in the table that are non-marked are prime.
 
-The Sieve of Eratosthenes uses an extra O(*n*) memory and its runtime complexity is O(*n* log log *n*). For the more mathematically inclined readers, you can read more about its algorithm complexity on [Wikipedia](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_complexity).
+  The Sieve of Eratosthenes uses an extra O(*n*) memory and its runtime complexity is O(*n* log log *n*). For the more mathematically inclined readers, you can read more about its algorithm complexity on [Wikipedia](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Algorithm_complexity).
 
-```
-public int countPrimes(int n) {
-   boolean[] isPrime = new boolean[n];
-   for (int i = 2; i < n; i++) {
-      isPrime[i] = true;
-   }
-   // Loop's ending condition is i * i < n instead of i < sqrt(n)
-   // to avoid repeatedly calling an expensive function sqrt().
-   for (int i = 2; i * i < n; i++) {
-      if (!isPrime[i]) continue;
-      for (int j = i * i; j < n; j += i) {
-         isPrime[j] = false;
-      }
-   }
-   int count = 0;
-   for (int i = 2; i < n; i++) {
-      if (isPrime[i]) count++;
-   }
-   return count;
-}
-```
+  ```
+  public int countPrimes(int n) {
+     boolean[] isPrime = new boolean[n];
+     for (int i = 2; i < n; i++) {
+        isPrime[i] = true;
+     }
+     // Loop's ending condition is i * i < n instead of i < sqrt(n)
+     // to avoid repeatedly calling an expensive function sqrt().
+     for (int i = 2; i * i < n; i++) {
+        if (!isPrime[i]) continue;
+        for (int j = i * i; j < n; j += i) {
+           isPrime[j] = false;
+        }
+     }
+     int count = 0;
+     for (int i = 2; i < n; i++) {
+        if (isPrime[i]) count++;
+     }
+     return count;
+  }
+  ```
