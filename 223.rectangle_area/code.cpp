@@ -1,10 +1,6 @@
 class Solution {
 public:
     int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
-        if (A > C) swap(A, C);
-        if (B > D) swap(B, D);
-        if (E > G) swap(E, G);
-        if (F > H) swap(F, H);
         vector<int> x;
         x.push_back(A);
         x.push_back(C);
