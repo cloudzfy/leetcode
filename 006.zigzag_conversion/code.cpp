@@ -1,32 +1,17 @@
 class Solution {
 public:
     string convert(string s, int numRows) {
+        if (numRows <= 1) return s;
         string ans;
-        for (int r = 0; r < numRows; r++)
-        {
-            int i = 0;
-            while(i < s.length())
-            {
-                if (i + r == i + max(1, 2 * (numRows - 1)) - r)
-                {
-                    if (i + r < s.length())
-                    {
-                        ans.push_back(s[i + r]);
-                    }
-                }
-                else
-                {
-                    if (i + r < s.length())
-                    {
-                        ans.push_back(s[i + r]);
-                    }
-                    if (i + max(1, 2 * (numRows - 1)) - r < s.length() && r != 0)
-                    {
-                        ans.push_back(s[i + max(1, 2 * (numRows - 1)) - r]);
-                    }
-                }
-                i += max (1, 2 * (numRows - 1));
+        int len = (numRows - 1) * 2;
+        int left = 0, right = len;
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < s.length(); j += len) {
+                if (j + left < s.length()) ans += s[j + left];
+                if (j + right < s.length() && right < len && left < right) ans += s[j + right];
             }
+            left++;
+            right--;
         }
         return ans;
     }
