@@ -5,14 +5,14 @@ public:
     vector<vector<int>> getFactors(int n) {
         if (n == 1) return ans;
         vector<int> myans;
-        getFactors(n, 2, n, myans);
+        getFactors(n, 2, myans);
         return ans;
     }
-    void getFactors(int n, int begin, int end, vector<int>& myans) {
+    void getFactors(int n, int begin, vector<int>& myans) {
         for (int i = begin; i * i <= n; i++) {
             if (n % i == 0) {
                 myans.push_back(i);
-                getFactors(n / i, i, end, myans);
+                getFactors(n / i, i, myans);
                 myans.pop_back();
             }
         }
