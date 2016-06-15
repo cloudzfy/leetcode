@@ -344,3 +344,4 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Design Twitter
 * Line Reflection
 * Count Numbers with Unique Digits
+* Rearrange String k Distance Apart
