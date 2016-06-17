@@ -345,3 +345,5 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Line Reflection
 * Count Numbers with Unique Digits
 * Rearrange String k Distance Apart
+* Logger Rate Limiter
+* Sort Transformed Array
