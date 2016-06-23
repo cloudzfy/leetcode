@@ -348,3 +348,6 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Logger Rate Limiter
 * Sort Transformed Array
 * Bomb Enemy
+* Design Hit Counter
+* Max Sum of Rectangle No Larger Than K
+* Nested List Weight Sum II
