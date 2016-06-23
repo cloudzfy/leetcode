@@ -6,7 +6,8 @@ Each function accepts a timestamp parameter (in seconds granularity) and you may
 
 It is possible that several hits arrive roughly at the same time.
 
-Example:
+**Example:**
+
 ```
 HitCounter counter = new HitCounter();
 
