@@ -351,3 +351,7 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Design Hit Counter
 * Max Sum of Rectangle No Larger Than K
 * Nested List Weight Sum II
+* Water and Jug Problem
+* Find Leaves of Binary Tree
+* Valid Perfect Square
+* Largest Divisible Subset
