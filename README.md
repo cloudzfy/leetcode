@@ -355,3 +355,5 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Find Leaves of Binary Tree
 * Valid Perfect Square
 * Largest Divisible Subset
+* Plus One Linked List
+* Range Addition
