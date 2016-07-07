@@ -358,3 +358,5 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Plus One Linked List
 * Range Addition
 * Sum of Two Integers
+* Super Pow
+* Find K Pairs with Smallest Sums
