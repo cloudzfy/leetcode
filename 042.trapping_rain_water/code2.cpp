@@ -6,7 +6,7 @@ public:
         int ans = 0;
         int leftHeight = height[0], rightHeight = height[n - 1];
         int left = 0, right = n - 1;
-        while (left + 1 < right) {
+        while (left < right) {
             if (leftHeight < rightHeight) {
                 left++;
                 ans += leftHeight - height[left] > 0 ? leftHeight - height[left] : 0;
