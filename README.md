@@ -360,3 +360,4 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Sum of Two Integers
 * Super Pow
 * Find K Pairs with Smallest Sums
+* Guess Number Higher or Lower
