@@ -5,6 +5,7 @@ private:
 public:
     /** Initialize your data structure here. */
     RandomizedSet() {
+        srand(time(0));
     }
     
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
