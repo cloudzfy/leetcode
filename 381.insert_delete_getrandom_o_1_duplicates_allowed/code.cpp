@@ -5,7 +5,7 @@ private:
 public:
     /** Initialize your data structure here. */
     RandomizedCollection() {
-        
+        srand(time(0));
     }
     
     /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
