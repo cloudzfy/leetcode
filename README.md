@@ -361,3 +361,13 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Super Pow
 * Find K Pairs with Smallest Sums
 * Guess Number Higher or Lower
+* Guess Number Higher or Lower II
+* Wiggle Subsequence
+* Combination Sum IV
+* Kth Smallest Element in a Sorted Matrix
+* Design Phone Directory
+* Insert Delete GetRandom O(1)
+* Insert Delete GetRandom O(1) - Duplicates allowed
+* Linked List Random Node
+* Ransom Note
+* Shuffle an Array
