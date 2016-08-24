@@ -372,3 +372,6 @@ Copyright (C) 2015-2016 Cloudzfy. All Rights Reserved.
 * Ransom Note
 * Shuffle an Array
 * Mini Parser
+* Lexicographical Numbers
+* First Unique Character in a String
+* Longest Absolute File Path
